@@ -1,4 +1,5 @@
-#CharonDeflat and ChatGPT create instagram bruteforce form userlist & passwordlist
+# CharonDefalt and ChatGPT create instagram bruteforce form userlist & passwordlist with tor
+
 import requests
 import stem.process
 import time
